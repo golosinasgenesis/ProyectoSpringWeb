@@ -1,0 +1,52 @@
+package com.enero.proyectospringweb.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "vendedor")
+public class Vendedor {
+   
+    @Id
+    @GeneratedValue
+    @Column(name = "id")
+    private long id;
+    
+    @Column(name = "estado")
+    private String estado;
+
+    @OneToOne(fetch= FetchType.EAGER)
+    @JoinColumn(name = "id_persona")
+    private Persona persona;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+    
+    public Persona getPersona() {
+        return persona;
+    }
+
+    public void setPersona(Persona persona) {
+        this.persona = persona;
+    }
+    
+}
