@@ -23,7 +23,7 @@
         
         <property name="packagesToScan">
             <list>
-                <value>com.enero.springweb.model</value>
+                <value>com.enero.proyectospringweb.model</value>
             </list>
         </property>
         

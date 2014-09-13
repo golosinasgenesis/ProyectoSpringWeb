@@ -5,7 +5,9 @@ import com.enero.proyectospringweb.model.Persona;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class PersonaDAOH extends BaseHibernateDAO implements PersonaDAO{
 
     @Override

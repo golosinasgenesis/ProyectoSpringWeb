@@ -5,7 +5,9 @@ import com.enero.proyectospringweb.model.Vendedor;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class VendedorDAOH extends BaseHibernateDAO implements VendedorDAO{
 
     @Override
